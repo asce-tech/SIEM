@@ -1,0 +1,10 @@
+name: Unauthorized Access Alert
+type: any
+index: "security-logs-*"
+filter:
+  - term:
+      action: "unauthorized_access"
+alert:
+  - "email"
+email:
+  - "security-team@example.com"
